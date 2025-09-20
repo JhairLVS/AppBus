@@ -51,6 +51,7 @@ cd bus-app/bus-frontend/bus-frontend
 npm install
 npm run dev
 ```
+---
 
 ## 🖥️ Uso
 
@@ -58,6 +59,8 @@ npm run dev
 - Navegar entre las secciones de Buses y Marcas
 - Hacer clic en las filas para ver detalles
 - Agregar, editar o eliminar registros desde la interfaz
+
+---
 
 ## 📁 Estructura del proyecto
 ```bash
@@ -67,3 +70,7 @@ bus-app/
 ├─ README.md
 └─ .gitignore
 ```
+---
+
+## 🧑‍💻 Autor
+Lennin Jhair Vargas Soto
