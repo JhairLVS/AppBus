@@ -38,3 +38,32 @@ Permite gestionar buses y marcas, incluyendo creación, edición, eliminación y
 1. Clonar el repositorio:  
 ```bash
 git clone https://github.com/JhairLVS/AppBus.git
+```
+2. Backend:
+```bash
+cd bus-app/bus-api
+mvn clean install
+mvn spring-boot:run
+```
+3. Frontend:
+```bash
+cd bus-app/bus-frontend/bus-frontend
+npm install
+npm run dev
+```
+
+## 🖥️ Uso
+
+- Abrir el navegador en http://localhost:5173 (o el puerto que indique Vite)
+- Navegar entre las secciones de Buses y Marcas
+- Hacer clic en las filas para ver detalles
+- Agregar, editar o eliminar registros desde la interfaz
+
+## 📁 Estructura del proyecto
+
+bus-app/
+├─ bus-api/          # Backend (Java Spring Boot)
+├─ bus-frontend/     # Frontend (React)
+├─ README.md
+└─ .gitignore
+
