@@ -60,10 +60,10 @@ npm run dev
 - Agregar, editar o eliminar registros desde la interfaz
 
 ## 📁 Estructura del proyecto
-
+```bash
 bus-app/
 ├─ bus-api/          # Backend (Java Spring Boot)
 ├─ bus-frontend/     # Frontend (React)
 ├─ README.md
 └─ .gitignore
-
+```
