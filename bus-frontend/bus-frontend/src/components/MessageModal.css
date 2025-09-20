@@ -1,0 +1,49 @@
+/* Fondo modal de mensaje */
+.modal-backdrop-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* más transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100; /* por encima del modal de detalles */
+}
+
+/* Contenido del modal de mensaje */
+.modal-content-message {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Botón de cerrar */
+.modal-content-message .btn-primary {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.modal-content-message .btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(123, 47, 247, 0.4);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

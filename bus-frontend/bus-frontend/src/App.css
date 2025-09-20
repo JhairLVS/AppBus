@@ -1,0 +1,265 @@
+/* Layout general */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Gradiente de títulos */
+.text-gradient {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Botón estilo moderno */
+.btn-primary {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(123, 47, 247, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Contenedor inicio */
+.inicio-section {
+  padding: 2rem;
+  animation: fadeIn 0.7s ease;
+}
+
+/* Caja blanca que contiene imagen + descripción */
+.inicio-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Imagen más grande */
+.inicio-img {
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Descripción */
+.descripcion {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #333;
+}
+
+/* Tablas */
+.styled-table, .bus-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-table th, .bus-table th {
+  background: #7b2ff7;
+  color: white;
+  text-align: left;
+  padding: 12px;
+}
+
+.styled-table td, .bus-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0d4fa;
+}
+
+.styled-table tr:hover, .bus-table tr:hover {
+  background: #f8f3ff;
+}
+
+/* Inputs y formularios */
+.card,
+form {
+  background: #fff;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(123, 47, 247, 0.2);
+  margin-bottom: 25px;
+  animation: fadeIn 0.6s ease;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d6b3ff;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7b2ff7;
+  box-shadow: 0 0 8px rgba(123, 47, 247, 0.4);
+}
+
+/* Paginación */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive inicio */
+@media (max-width: 768px) {
+  .inicio-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio-img {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 1rem;
+  }
+
+  .descripcion {
+    margin-top: 1rem;
+    text-align: left;
+  }
+}
+
+/* Tabla buses responsive */
+.bus-table-container {
+  overflow-x: auto; /* asegura que la tabla no se desborde */
+}
+
+.bus-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bus-table th,
+.bus-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0d4fa;
+  text-align: left;
+}
+
+.bus-table th {
+  background: #7b2ff7;
+  color: white;
+}
+
+.bus-table tr:hover {
+  background: #f8f3ff;
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+  .bus-table thead {
+    display: none;
+  }
+
+  .bus-table, 
+  .bus-table tbody,
+  .bus-table tr,
+  .bus-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .bus-table tr {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    background-color: #fff !important; /* fondo blanco para todas las filas */
+  }
+
+  .bus-table td {
+    padding: 6px 10px;
+    border: none;
+    position: relative;
+    padding-left: 45%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .bus-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    width: 40%;
+    text-align: left;
+  }
+
+  /* Botones en móvil */
+  .bus-table td:last-child {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .bus-table td button {
+    margin-top: 10px;
+  }
+}
+
+/* Cards generales en móvil */
+@media (max-width: 768px) {
+  .card {
+    background-color: #fff !important; /* todas las cards en blanco */
+    box-shadow: 0 4px 14px rgba(123, 47, 247, 0.2);
+    margin-bottom: 1rem;
+  }
+}

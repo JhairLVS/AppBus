@@ -1,0 +1,71 @@
+/* Contenedor principal de la sección inicio */
+.inicio-container {
+  display: flex;
+  flex-direction: column; /* Imagen debajo del título, texto debajo de la imagen */
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título arriba de la imagen */
+.inicio-titulo {
+  font-size: 2rem;
+  color: #7b2ff7; /* degradado solo en texto si quieres */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Icono en color normal */
+.inicio-icon {
+  color: inherit; /* Mantiene color normal, sin degradado */
+  margin-right: 8px;
+}
+
+/* Imagen más grande */
+.inicio-img {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Descripción debajo */
+.descripcion {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Párrafos */
+.descripcion p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Quitar viñetas de listas */
+.descripcion ul,
+.descripcion li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inicio-img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .descripcion {
+    margin-top: 1rem;
+    text-align: left;
+  }
+}

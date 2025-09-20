@@ -1,0 +1,41 @@
+/* Contenedor de contacto */
+.contacto-container {
+  max-width: 500px;
+  margin: 3rem auto; /* centrado horizontal y separación arriba/abajo */
+  background: #fff; /* fondo blanco */
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0; /* inicio invisible para animación */
+}
+
+/* Título contacto */
+.contacto-titulo {
+  font-size: 2rem;
+  color: #7b2ff7; /* morado */
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Párrafos dentro del contacto */
+.contacto-container p {
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}

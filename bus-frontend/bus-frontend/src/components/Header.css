@@ -1,0 +1,78 @@
+/* Header general */
+.header {
+  width: 100%;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Logo o título */
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: white; /* fijo, no degradado */
+  font-weight: bold;
+}
+
+/* Links de navegación */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    flex-direction: column;
+    width: 220px;
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
